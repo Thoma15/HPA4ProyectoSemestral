@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ProyectoSemestralhpa</string>
+    <string name="start">START</string>
+    <string name="step_count">STEP COUNT</string>
+    <string name="_0">0</string>
+    <string name="sensibilidad_del_sensor">Sensibilidad del sensor</string>
+    <string name="stop">STOP</string>
 </resources>
