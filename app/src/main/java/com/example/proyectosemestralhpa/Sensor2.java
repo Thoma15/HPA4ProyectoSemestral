@@ -79,4 +79,16 @@ public class Sensor2 extends AppCompatActivity {
         mGestureDetector.onTouchEvent(event);
         return super.onTouchEvent(event);
     }
+    
+        buttonreturn.setOnClickListener(new OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            changeActivity();
+        }
+    });
+
+    private void changeActivity() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }
