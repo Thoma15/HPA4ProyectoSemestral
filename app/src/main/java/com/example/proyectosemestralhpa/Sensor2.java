@@ -65,7 +65,7 @@ public class Sensor2 extends AppCompatActivity {
 
         @Override
         public boolean onSingleTapConfirmed(MotionEvent e) {
-            Toast.makeText(Sensor.this, "Gesto de un solo tap detectado", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Sensor2.this, "Gesto de un solo tap detectado", Toast.LENGTH_SHORT).show();
             buttonreturn.setVisibility(View.INVISIBLE);
             textpress.setVisibility(View.INVISIBLE);
             mImage1.setVisibility(View.VISIBLE);
