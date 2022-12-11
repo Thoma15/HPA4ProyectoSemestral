@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         button = findViewById(R.id.button);
-        spin = (Spinner) findViewById(R.id.spin);
+        spin = (Spinner) findViewById(R.id.spinner);
         String[] opciones = {"Sensor 1 Proximidad", "Sensor 2 Gestos","Sensor 3 Detector", "Sensor 4 Orientación"};
         ArrayAdapter<String> aa = new
                 ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,opciones);
