@@ -2,6 +2,8 @@ package com.example.proyectosemestralhpa;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GestureDetectorCompat;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -26,9 +28,17 @@ public class Sensor2 extends AppCompatActivity {
         mImage1 = findViewById(R.id.image1);
         mImage2 = findViewById(R.id.image2);
         textpress = findViewById(R.id.textpress);
-        buttonreturn = findViewById(R.id.buttonreturn);
+        buttonreturn = findViewById(R.id.button6);
 
         mGestureDetector = new GestureDetectorCompat(this, new GestureListener());
+
+
+        buttonreturn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Sensor2.this, MainActivity.class));
+            }
+        });
 
     }
 
@@ -72,6 +82,7 @@ public class Sensor2 extends AppCompatActivity {
             mImage2.setVisibility(View.INVISIBLE);
             return super.onSingleTapConfirmed(e);
         }
+
     }
 
     @Override
@@ -79,16 +90,4 @@ public class Sensor2 extends AppCompatActivity {
         mGestureDetector.onTouchEvent(event);
         return super.onTouchEvent(event);
     }
-    
-        /*buttonreturn.setOnClickListener(new OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            changeActivity();
-        }
-    });
-
-    private void changeActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }*/
 }

@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         button = findViewById(R.id.button);
-        spin = (Spinner) findViewById(R.id.spinner);
+        spin = (Spinner) findViewById(R.id.spin);
         String[] opciones = {"Sensor 1 Proximidad", "Sensor 2 Gestos","Sensor 3 Detector", "Sensor 4 Orientación"};
         ArrayAdapter<String> aa = new
                 ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,opciones);
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(MainActivity.this, Sensor1.class);
                         startActivity(intent);
                     }
-                    else if(selec.equals("Sensor 2 Reconocimiento")){
+                    else if(selec.equals("Sensor 2 Gestos")){
                         Intent intent = new Intent(MainActivity.this, Sensor2.class);
                         startActivity(intent);
                     }

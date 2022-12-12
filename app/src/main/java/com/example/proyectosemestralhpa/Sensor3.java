@@ -1,17 +1,15 @@
 package com.example.proyectosemestralhpa;
 
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
-import java.text.NumberFormat;
-
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -42,6 +40,8 @@ public class Sensor3 extends Activity implements SensorEventListener{
     private boolean ignore;
     private int countdown;
 
+    Button button5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +51,7 @@ public class Sensor3 extends Activity implements SensorEventListener{
         stepView = (TextView) findViewById((R.id.stepView));
         countToggle = (ToggleButton) findViewById(R.id.countToggle);
         seek = (SeekBar) findViewById(R.id.seek);
+        button5 = (Button)findViewById(R.id.button6);
 
         seek.setProgress(0);
         seek.incrementProgressBy(1);
@@ -58,6 +59,14 @@ public class Sensor3 extends Activity implements SensorEventListener{
         // keep screen light on (wake lock light)
 
         implementListeners();
+
+
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Sensor3.this, MainActivity.class));
+            }
+        });
     }
 
     protected float[] lowPassFilter( float[] input, float[] output ) {

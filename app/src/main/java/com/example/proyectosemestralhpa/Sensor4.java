@@ -2,19 +2,25 @@ package com.example.proyectosemestralhpa;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class Sensor4 extends AppCompatActivity {
     private SensorManager sensorManager;
     private ImageView compassImg;
+
+    private Button button6;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +31,17 @@ public class Sensor4 extends AppCompatActivity {
         Sensor accelerometerSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         sensorManager.registerListener(listener, magneticSensor, SensorManager.SENSOR_DELAY_NORMAL);
         sensorManager.registerListener(listener, accelerometerSensor,SensorManager.SENSOR_DELAY_NORMAL);
+
+        button6 = (Button) findViewById(R.id.button6);
+
+
+
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Sensor4.this, MainActivity.class));
+            }
+        });
 
     }
     @Override
