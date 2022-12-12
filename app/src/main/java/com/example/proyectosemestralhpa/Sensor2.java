@@ -80,7 +80,7 @@ public class Sensor2 extends AppCompatActivity {
         return super.onTouchEvent(event);
     }
     
-        buttonreturn.setOnClickListener(new OnClickListener() {
+        /*buttonreturn.setOnClickListener(new OnClickListener() {
         @Override
         public void onClick(View view) {
             changeActivity();
@@ -90,5 +90,5 @@ public class Sensor2 extends AppCompatActivity {
     private void changeActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-    }
+    }*/
 }
